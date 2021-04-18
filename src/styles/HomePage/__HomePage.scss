@@ -1,0 +1,40 @@
+.HomePageSec1{
+    background-image: url('../../images/bg1.jpg');
+    min-height: 75vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba($color: $main_color, $alpha: .50);
+        z-index: 0;
+    }
+    > div{
+        position: relative;
+        z-index: 1;
+        width: 80vw;
+        margin: auto;
+        color: white;
+        max-width: 675px;
+        > p{
+            font-size: 1.5em;
+            margin-top: 1.5em;
+        }
+    }
+    .rental_form_con{
+        margin-top: 5em;
+        margin-bottom: -10em;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 2em;
+        color: black;
+    }
+}

@@ -1,0 +1,15 @@
+@import './_variables';
+.generalActionBtn{
+            padding: 0.75em 1.5em;
+            font-size: 1.2em;
+            background-color: $action_color;
+            border: none;
+            margin-top: 1.5em;
+            color: white;
+            font-weight: 600;
+            transition: all .35s;
+            &:hover{
+                background-color: darken($color: $action_color, $amount: 5);
+                transform: scale(.95);
+            }
+        }
