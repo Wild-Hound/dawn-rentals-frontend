@@ -22,12 +22,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function FindRentalForm() {
-  const [age, setAge] = useState("");
+  const [category, setCategory] = useState("");
+  const [location, setLocation] = useState("");
   const [value, setValue] = React.useState("female");
-  const classes = useStyles();
 
-  const handleChangeSelect = (event) => {
-    setAge(event.target.value);
+  const handleChangeSelectCat = (event) => {
+    setCategory(event.target.value);
+    console.log(event.target.value);
+  };
+  const handleChangeSelectLoc = (event) => {
+    setLocation(event.target.value);
     console.log(event.target.value);
   };
 
@@ -45,8 +49,8 @@ function FindRentalForm() {
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
-          value={age}
-          onChange={handleChangeSelect}
+          value={category}
+          onChange={handleChangeSelectCat}
           className="rental_Selects"
         >
           <MenuItem value="" disabled>
@@ -64,8 +68,8 @@ function FindRentalForm() {
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
-          value={age}
-          onChange={handleChangeSelect}
+          value={location}
+          onChange={handleChangeSelectLoc}
           className="rental_Selects"
         >
           <MenuItem value="" disabled>
