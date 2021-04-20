@@ -9,7 +9,7 @@ function AddService() {
 
   const onFinish = (values) => {
     console.log("Success:", values);
-    fetch("http://localhost:3030/add/service", {
+    fetch("https://newtest404.herokuapp.com/add/service", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {

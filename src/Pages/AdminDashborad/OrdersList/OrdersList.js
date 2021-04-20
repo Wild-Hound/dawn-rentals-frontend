@@ -12,7 +12,7 @@ function OrdersList() {
       act: action,
     };
 
-    fetch("http://localhost:3030/change/status", {
+    fetch("https://newtest404.herokuapp.com/change/status", {
       method: "POST",
       body: JSON.stringify(x),
       headers: {

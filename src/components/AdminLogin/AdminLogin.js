@@ -11,7 +11,7 @@ function AdminLogin() {
 
   const onFinish = (values) => {
     values.role = "admin";
-    fetch("http://localhost:3030/get/user", {
+    fetch("https://newtest404.herokuapp.com/get/user", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {

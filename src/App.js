@@ -6,7 +6,6 @@ import LoginPage from "./Pages/LoginPage/LoginPage";
 import { createContext, useState, useEffect } from "react";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import AdminLogin from "./components/AdminLogin/AdminLogin";
-import AdminDashborad from "./Pages/AdminDashborad/AdminDashborad";
 
 export const GlobalContext = createContext();
 
@@ -19,9 +18,10 @@ function App() {
   const [admin, setAdmin] = useState(false);
   const [reviewList, setReviewList] = useState([]);
   const [userOrdered, setUserOrdered] = useState([]);
+  const [selectedService, setSelectedService] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3030/get/services")
+    fetch("https://newtest404.herokuapp.com/get/services")
       .then((res) => res.json())
       .then((data) => {
         setServiceList([...data]);
@@ -29,7 +29,7 @@ function App() {
     setReRender(false);
   }, [reRender]);
   useEffect(() => {
-    fetch("http://localhost:3030/get/reviews")
+    fetch("https://newtest404.herokuapp.com/get/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviewList([...data]);
@@ -37,7 +37,7 @@ function App() {
     setReRender(false);
   }, [reRender]);
   useEffect(() => {
-    fetch("http://localhost:3030/get/ordered", {
+    fetch("https://newtest404.herokuapp.com/get/ordered", {
       method: "POST",
       body: JSON.stringify(email),
       headers: {
@@ -49,6 +49,8 @@ function App() {
         setUserOrdered(data);
       });
   }, [reRender, email]);
+
+  console.log(process.env.REACT_APP_TEST);
 
   return (
     <GlobalContext.Provider
@@ -69,6 +71,8 @@ function App() {
         setReviewList,
         userOrdered,
         setUserOrdered,
+        selectedService,
+        setSelectedService,
       }}
     >
       <div className="App">

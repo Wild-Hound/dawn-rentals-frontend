@@ -11,7 +11,7 @@ function ManageServices() {
   function deleteService(e, result) {
     let x = { id: result["_id"] };
     console.log(x);
-    fetch("http://localhost:3030/delete/service", {
+    fetch("https://newtest404.herokuapp.com/delete/service", {
       method: "POST",
       body: JSON.stringify(x),
       headers: {

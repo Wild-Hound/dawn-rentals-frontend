@@ -9,7 +9,7 @@ function ReviewSetion() {
 
   const onFinish = (values) => {
     console.log("success", values);
-    fetch("http://localhost:3030/add/review", {
+    fetch("https://newtest404.herokuapp.com/add/review", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {

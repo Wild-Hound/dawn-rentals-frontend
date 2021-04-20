@@ -10,7 +10,7 @@ function MakeAdmin() {
   const onFinish = (values) => {
     values.role = "admin";
     console.log("Success:", values);
-    fetch("http://localhost:3030/add/user", {
+    fetch("https://newtest404.herokuapp.com/add/user", {
       method: "POST",
       body: JSON.stringify(values),
       headers: {
