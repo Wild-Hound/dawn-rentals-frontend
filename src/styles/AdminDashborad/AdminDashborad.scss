@@ -1,0 +1,15 @@
+.addAdminForm,.addService{
+    max-width: 375px;
+    margin: auto;
+    padding: 1.5em 0;
+}
+
+.deleteServiceBtn{
+    font-size: 1em;
+    padding: 5px 10px;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

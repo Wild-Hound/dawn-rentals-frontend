@@ -1,3 +1,4 @@
+@import '../BreakPoints/BreakPoints.scss';
 .HomePageSec1{
     background-image: url('../../images/bg1.jpg');
     min-height: 75vh;
@@ -23,12 +24,18 @@
         z-index: 1;
         width: 80vw;
         margin: auto;
-        color: white;
-        max-width: 675px;
         
+        max-width: 675px;
+        @include media("<desktop"){
+            margin-top: 5em;
+        }
+        >h1{
+            color: white !important;
+        }
         > p{
             font-size: 1.5em;
             margin-top: 1.5em;
+            color: white !important;
         }
     }
     .rental_form_con{
@@ -37,5 +44,156 @@
         background-color: rgba(255, 255, 255, 0.5);
         padding: 2em;
         color: black;
+        box-shadow: 3px 3px 15px 1px rgba(180, 180, 180, 0.664);
+        border-radius: 10px;
     }
+}
+
+.HomePageSec2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    margin-bottom: 2.5em;
+    @include media("<desktop"){
+            flex-direction: column;
+        }
+    >img{
+        width: 80%;
+        max-width: 650px;
+        @include media("<desktop"){
+            margin-top: 12em;
+        }
+    }
+    >div{
+        width: 80%;
+        max-width: 75ch;
+        >*{
+            margin: 1em 0;
+        }
+    }
+}
+
+.HomePageSec3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 2.5em 2em;
+    background-image: url('../../images/bg3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(116, 125, 140, 0.8);
+        z-index: 1;
+    }
+    >div{
+        position: relative;
+        z-index: 2;
+        max-width: 18em;
+        margin: 1.5em 0;
+        color: white;
+        >h3{
+            font-size: 1.5em;
+            color: white;
+        }
+        >div{
+            >span{
+                margin-right: .25em;
+            }
+            font-size: 3.5em;
+        }
+    }
+}
+
+.HomePageSec4{
+    text-align: center;
+    padding: 2em 0;
+    .messageForm{
+        display: flex;
+        flex-direction: column;
+        max-width: 75ch;
+        margin: auto;
+        padding: 2em 1.5em;
+    }
+}
+
+.HomePageSec5{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 5em 1em;
+    background-image: url('../../images/bg4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: white !important;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+    >.serviceCard{
+        width: 350px;
+        padding: 1em 1.5em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.35s;
+        background: linear-gradient(115deg, rgba(121,22,66,0.6446953781512605) 0%, rgba(122,122,177,0.6811099439775911) 38%, rgba(112,179,193,0.5410539215686274) 100%);
+        z-index: 2;
+        &:hover{
+            transform: scale(1.05);
+        }
+        >h2{
+            color: white !important;
+        }
+    }
+}
+
+.HomePageSec6{
+    text-align: center;
+    padding: 3.5em 1em;
+    background: linear-gradient(75deg, rgba(121,22,66,0.6446953781512605) 0%, rgba(122,122,177,0.6811099439775911) 38%, rgba(112,179,193,0.5410539215686274) 100%);
+    >.cardsHolding{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+    .reviewCard{
+        padding: 1em;
+        margin: 1em;
+        background-color: aqua;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 350px;
+        transition: all 0.35s;
+        &:hover{
+            transform: scale(1.15);
+        }
+
+    }
+}
+
+.footer{
+    text-align: center;
+    font-size: 24px;
+    padding: 1em;
+    background-color: #202327;
+    color: white;
 }
