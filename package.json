@@ -17,6 +17,7 @@
     "antd": "^4.15.1",
     "bootstrap": "^4.6.0",
     "dot-env": "0.0.1",
+    "dotenv": "^10.0.0",
     "firebase": "^8.4.1",
     "include-media": "^1.4.9",
     "node-sass": "^5.0.0",
